@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in & Sign Up Form</title>
+    <link href="/css/auth.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+
+     <div class="overlay"></div>
+    
+    <section id="bg" style="background-color: #1b1822">
+      <h1 class="heading" style="letter-spacing: 5px; color: #fb2576">
+        PurrPatrol
+      </h1>
+      <div class="container">
+        <div class="user signinBx">
+          <div class="imgBx">
+  <div class="eye" style="position: absolute; z-index: 1; top:190px; left:225px;" ></div>
+  <img src="images/img1.jpg" alt="" style="position: relative; z-index: 0;">
+</div>
+
+
+          <div class="formBx">
+            <form action="auth/login" method="post">
+              <h2 style="color: #fb2576">Sign In</h2>
+              <input type="email" name="email" placeholder="Email" n />
+              <input type="password" name="password" placeholder="Password" n />
+              <input
+                type="submit"
+                name=""
+                value="Login"
+                style="background-color: #fb2576"
+              />
+              <p class="signup" style="color: white">
+                Don't have an account ?
+                <a href="#" onclick="toggleForm();" style="color: #fb2576"
+                  >Sign Up.</a
+                >
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="user signupBx">
+          <div class="formBx">
+            <form action="auth/register" method="post">
+              <h2 style="color: #fb2576">Create an account</h2>
+              <input type="text" name="name" placeholder="Name" n />
+              <input type="email" name="email" placeholder="Email" n />
+              <input type="password" name="password" placeholder="Password" n />
+              <input type="text" name="pincode" placeholder="Locality Pincode" n />
+              <input
+                type="submit"
+                name=""
+                value="Sign Up"
+                style="background-color: #fb2576"
+              />
+              <p class="signup" style="color: white">
+                Already have an account ?
+                <a href="#" onclick="toggleForm();" style="color: #fb2576"
+                  >Sign in.</a
+                >
+              </p>
+            </form>
+          </div>
+          <div class="imgBx">
+            <div class="eye1" style="position: absolute; z-index: 1; top:190px; left:242px;" ></div>
+            <img src="images/img2.jpg" alt="" /></div>
+        </div>
+      </div>
+    </section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      const toggleForm = () => {
+        const container = document.querySelector(".container");
+        container.classList.toggle("active");
+      };
+    </script>
+
+    <script src="/js/auth.js"></script>
+    <style>
+      .overlay {
+    background-color: #fb2576;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#report {
+    background-color: rgba(255, 255, 255, 0.8); /* Use a semi-transparent white background for the form */
+    width: 400px;
+    margin: 0 auto; /* Center the form horizontally */
+    position: relative;
+    z-index: 1; /* Ensure the form appears above the overlay */
+}
+    </style>
+  </body>
+</html>

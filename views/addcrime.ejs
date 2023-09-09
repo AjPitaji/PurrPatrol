@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Here</title>
+    <link rel="stylesheet" href="/css/add.css">
+</head>
+ 
+<body>
+ 
+
+   <div class="wrapper">
+    <center>
+      <div class="pageTitle title" style="width: 100%;color:#fb2576; margin-top: 100px;margin-bottom: 50px;" >Animals do not have a voice, so you must give them one</div>
+    </center>
+    <form class="form" action="/report" method="POST">
+      <div class="pageTitle title">Report Here</div>
+      <div class="secondaryTitle title">Please fill this form to report a crime:</div>
+      <input type="text" class="name formEntry" name="culprit" placeholder="Culprit Name" required />
+      <input type="text" class="email formEntry" name="location" placeholder="Location" required />
+      <input type="text" class="name formEntry" name="pincode" placeholder="Pincode" required />
+      
+      <!-- Label for Scale Dropdown -->
+      <label for="scale" class="formEntry" style="position:relative; left: 70px; color: black;">Scale and upload any evident photo of the scene:</label>
+      <select id="scale" class="formEntry" name="scale" required>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      
+      <!-- Label for File Upload -->
+      
+      <input type="text" class="name formEntry" name="image" placeholder="give evident photo url" required />
+
+      <input type="text" class="name formEntry" name="type" placeholder="Crime Type" required />
+      <textarea class="message formEntry" name="description" placeholder="Description" required></textarea>
+      <button type="submit" class="submit formEntry">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

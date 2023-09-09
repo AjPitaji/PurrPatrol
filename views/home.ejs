@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/home.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.cdnfonts.com/css/there-brat" rel="stylesheet">
+    <title>Reported Crimes</title>
+</head>
+<body style="background: hsl(207, 19%, 9%);">
+<%- include("partials/header.ejs" );%>
+    <h1 class="ml13" style="position: relative; left: 10px; margin-top: 100px; margin-bottom: 
+    50px;">Reported Crimes</h1>
+                        <a href="/report" class="button">Report a crime</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <div class="grid-container">
+        <% crimes.forEach(function(crime){ %>
+<div class="card" style="background-image: url('<%= crime.image %>');">
+                <div class="card-content">
+                    <h2 class="card-title">Culprit: <%= crime.culprit %></h2> <!-- Updated to 'crime.culprit' -->
+                    <p class="card-body"><%= crime.type %><br><%=crime.type%><br><%=crime.scale%><br><%=crime.location%><br><%=crime.pincode%></p>
+                                        <p class="card-body"><%=crime.description%></p>
+
+                     <!-- Updated to 'crime.type' -->
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    
+    <script>
+        // Wrap every letter in a span
+        var textWrapper = document.querySelector('.ml13');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
+        
+            loader.classList.add("loader--hidden");
+        
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        });
+    </script>
+
+    
+</body>
+</html>

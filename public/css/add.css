@@ -1,0 +1,120 @@
+body {
+  background-color: #1b1822;
+  /* Primary background color */
+  color: #fff;
+  /* Text color */
+}
+
+.form {
+  margin-top: 100px;
+  background: #fff;
+  /* Form background color */
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-top: 5px solid #fb2576;
+  /* Secondary color for the top border */
+  animation: bounce 1.5s infinite;
+}
+
+/* Placeholder text color */
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+  color: #1b1822;
+  /* Primary color */
+}
+
+.title {
+  display: block;
+  font-family: sans-serif;
+  margin: 10px auto 5px;
+  width: 300px;
+}
+
+h3 {
+  display: block;
+  font-family: sans-serif;
+  margin-top: 50px;
+  width: 300px;
+}
+
+.termsConditions {
+  margin: 0 auto 5px 80px;
+  color: #1b1822;
+  /* Primary color */
+}
+
+.pageTitle {
+  font-size: 2em;
+  font-weight: bold;
+  color: #1b1822;
+  /* Primary color */
+}
+
+.secondaryTitle {
+  color: grey;
+}
+
+/* Input field colors */
+.name,
+.email,
+.message {
+  background-color: #ebebeb;
+  color: #1b1822;
+  /* Primary color */
+}
+
+.name:hover,
+.email:hover,
+.message:hover {
+  border-bottom: 5px solid #fb2576;
+  /* Secondary color for the border on hover */
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+/* Button styles */
+.formEntry {
+  display: block;
+  margin: 30px auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  transition: all 0.5s ease 0s;
+}
+
+.submit {
+  width: 200px;
+  color: white;
+  background-color: #fb2576;
+  /* Secondary color for the button background */
+  font-size: 20px;
+}
+
+.submit:hover {
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  transform: translateY(-3px);
+  width: 300px;
+  border-top: 5px solid #1b1822;
+  /* Primary color for the top border on hover */
+  border-radius: 0%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 4px);
+  }
+
+  50% {
+    transform: translate(0, 8px);
+  }
+}
