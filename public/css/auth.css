@@ -189,6 +189,11 @@ section .container.active .signinBx .imgBx {
         font-size: 5ch;
     }
 }
+@media (max-width: 1400px) {
+ .heading{
+    display: none;
+ }
+}
 .eye1,
 .eye {
     position: relative;
