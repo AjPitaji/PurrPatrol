@@ -187,11 +187,12 @@ section .container.active .signinBx .imgBx {
 
     .heading {
         font-size: 5ch;
+        visibility: visible;
     }
 }
 @media (max-width: 1400px) {
  .heading{
-    display: none;
+    visibility: hidden;
  }
 }
 .eye1,
